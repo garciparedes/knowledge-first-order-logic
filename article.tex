@@ -59,17 +59,43 @@
     \section{?`Cuáles de las siguientes expresiones son substituciones validas?}
 
         \begin{itemize}
+
             \item
-				$\{f(x)/y\}$
+				$\{ f(x)/y \}$
 				\newline
 				Válida: Cumple las condiciones para ser una substitución válida.
-            \item
-				$\{f(x)/x\}$
+
+			\item
+				$\{ f(x)/x \}$
 				\newline
 				Inválida: No cumple la condición que restringe la aparición de la variable en el término.
-            \item
-				$\{g(x)/y, y/u\}$
+
+			\item
+				$\{ g(x)/y, y/u \}$
 				\newline
 				Inválida: No cumple la condición que restringe la aparición de la variable en el término, aunque este sea en otra ligadura.
-        \end{itemize}
+
+		\end{itemize}
+
+	\section{Obtener el unificador más general, umg, de los siguientes conjuntos de expresiones:}
+
+		\begin{itemize}
+
+			\item
+				$\{ P(x, y), P(f(u), g(x)) \}$
+				\newline
+				UMG: $\{ f(u)/x, g(f(u))/y \}$
+				\newline
+				En el caso de la segunda substitución, tal y como indica el algoritmo de unificación, una vez que se substituye una variable, esta afecta a todas sus siguientes apariciones en la expresión.
+
+			\item
+				$\{ P(x, y), P(f(y), x) \}$
+				\newline
+				UMG: $\not\exists$
+				\newline
+				En este caso el unificador más general no existe debido a que no unifican, ya que la variable substituida no puede aparecer en el término ($ f(y)/y $ no es válido).
+
+		\end{itemize}
+
+
 \end{document}
